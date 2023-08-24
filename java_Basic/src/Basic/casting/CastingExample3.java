@@ -21,7 +21,7 @@ public class CastingExample3 {
 		System.out.println(d);
 		
 		//int보다 작은 크기의 데이터 연산은 자동으로 값이
-		//int로 변환되어 처리됩니다.(테이터 손실의 방지)
+		//int로 변환되어 처리됨.(테이터 손실의 방지)
 		byte b1 = 100;
 		byte b2	= 70;
 		System.out.println(b1+b2);

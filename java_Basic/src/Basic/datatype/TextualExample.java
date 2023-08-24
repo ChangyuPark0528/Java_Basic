@@ -40,7 +40,7 @@ public class TextualExample {
 		
 		//내 생일은 10월 13일 입니다.
 		
-		System.out.println("내 생일은 "+month+"월"+day+"일 입니다.");
+		System.out.println("내 생일은 "+month+"월 "+day+"일 입니다.");
 
 	}
 

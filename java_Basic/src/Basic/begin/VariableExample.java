@@ -48,6 +48,7 @@ public class VariableExample {
 		//중복선언 할 수 없습니다.
 		String name = "홍길동";
 		//int name = 1004; (x)
+		System.out.println(name);
 		
 		//선언 및 초기화하지 않은 변수는 사용이 불가능합니다.
 		//int result = myScore + num;(x) num을 선언한적이 없음
