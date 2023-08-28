@@ -26,7 +26,7 @@ public class IfQuiz01 {
 		}else if(num2 > num) {
 			System.out.printf("%d, %d -> %d 이(가)큰 수 입니다.",num,num2,num2);
 			}
-		else if(num2 == num) {
+		else {
 			System.out.println(num+","+num2+"-> 같은 수 입니다.");
 			}
 		

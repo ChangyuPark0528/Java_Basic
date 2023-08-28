@@ -52,7 +52,7 @@ public class SwitchQuiz01 {
             System.out.println("[+,-,*,/]");
         }
         
-        if(!flag) {
+        if(!flag) { // flag == false
             System.out.printf("%d %s %d = %d\n", num1, operator, num2, result);            
         }
         
