@@ -56,7 +56,7 @@ public class MethodExample3 {
 	
 	static void divide(int n1, int n2) {
 		if(n2 == 0) {
-			System.out.println("0으로 나누면 어떡합니까");
+			System.out.println("0으로 나누면 어떡합니까!");
 			return; // void에서는 retuen은 강제종료.
 		}
 		int result = n1 /n2;
