@@ -63,6 +63,7 @@ public class Score {
 
 
 	public void setKor(int kor) {
+		
 		this.kor = kor;
 	}
 

@@ -23,9 +23,9 @@ public class ScoreMein {
          모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
         */
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); 
 		
-		Score[] s1 = new Score[100];
+		Score[] s1 = new Score[100]; //Score 배열에
 		
 		for(int i=0; i<s1.length; i++) {
 			System.out.print("이름: ");
@@ -47,6 +47,7 @@ public class ScoreMein {
 		System.out.println("------------------------------------");
 		for(Score a1 : s1) {
 			if(a1 == null)break;
+			System.out.println("========");
 			a1.scoreInfo();
 		}
 		
