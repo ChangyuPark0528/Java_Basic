@@ -17,7 +17,7 @@ public class MainClass {
 		Tesla t3 = new Tesla();
 		Tesla t4 = new Tesla();
 		
-//		s1.run();
+//		s1.run();s2.run();s3.run();p1.run();p2.run();
 		
 //		Sonata[] sonatas = {s1, s2, s3};
 //		for(Sonata s : sonatas) {
@@ -47,9 +47,10 @@ public class MainClass {
 		
 		System.out.println("------------------------------");
 		
-		Car c = kim.buyCar("테슬라");
-		c.run();
-		
+		Tesla myTesla = (Tesla) kim.buyCar("테슬라");
+//		c.run();
+//		Tesla myTesla = (Tesla)c;
+		myTesla.activeAutopilot();
 		
 		
 		

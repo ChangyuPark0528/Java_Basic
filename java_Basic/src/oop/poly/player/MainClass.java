@@ -1,5 +1,7 @@
 package oop.poly.player;
 
+import oop.poly.casting.Child;
+
 public class MainClass extends Player{
 
 	public static void main(String[] args) {
@@ -10,6 +12,11 @@ public class MainClass extends Player{
 		Mage m2 = new Mage("마법사2");
 		Hunter h1 = new Hunter("사냥꾼1");
 		Hunter h2 = new Hunter("사냥꾼2");
+		
+		
+		
+		
+		
 		
 //		Player[] user = {m2,w1,w2,h1,h2};
 //		for(Player p : user) {
@@ -41,6 +48,7 @@ public class MainClass extends Player{
 		
 		w1.attack(m1);
 
+		w1.rush(m1);
 	}
 
 }
