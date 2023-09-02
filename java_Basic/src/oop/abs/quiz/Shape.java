@@ -11,17 +11,19 @@ public abstract class Shape {
         
     4. 도형 이름을 출력할 수 있는 메서드 getName()을 선언. (강제 x)
    */
+	public Shape() {}
 	
-	private Shape name ;
+	private String name;
 	
-	private void name(String name) {
-		
+	public Shape(String name) {
+		this.name = name;  
 	}
 	
 	public abstract double getArea();
 	
-	public void getName() {
-		System.out.println();
+	public String getName() {
+		System.out.println(this.name);
+		return this.name;
 	}
 	
 	
