@@ -69,6 +69,7 @@ public class HashSetExample {
 		for(String s : set) {
 			System.out.println(s);
 		}
+		//set에서 꺼낼때 향상for문 사용
 		
 		//set에서 객체를 삭제: remove(객체)
 		set.remove("JSP");

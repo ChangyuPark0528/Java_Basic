@@ -6,6 +6,9 @@ import java.util.List;
 public class LinkedListExample {
 
 	public static void main(String[] args) {
+		//삭제가 빈번하게 발생할때 유용하게 사용할 수 있음
+		
+		
 		
 		LinkedList<String> list = new LinkedList<>();
 		
