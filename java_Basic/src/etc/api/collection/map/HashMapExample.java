@@ -56,7 +56,7 @@ public class HashMapExample {
 		}
 		
 		//Map의 객체를 삭제: remove(key)
-		//key를 주시면 value도 함께 제거됩니다.
+		//key를 주면 value도 함께 제거됩니다.
 		map.remove("야옹이");
 		System.out.println(map);
 		
