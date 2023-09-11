@@ -1,12 +1,14 @@
 package etc.api.io.buffered;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+
 
 public class BufferedQuiz {
 
@@ -26,53 +28,47 @@ public class BufferedQuiz {
 	      파일을 읽어서 콘솔에 출력해 보세요.
 		 */
 		
-		Scanner sc = new Scanner(System.in);
-		
-		LocalDate now = LocalDate.now();
+		LocalDate date = LocalDate.now();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern
 				("yyyyMMdd");
 		
+		File file = new File("C:/mywork/file/" + date.format(dtf)+"file");
 		
-		File file = new File("C:/mywork/file/"+now.format(dtf)+"file");
 		if(!file.exists()) {
 			file.mkdirs();
-			System.out.println("파일 생성완료!");
 		}else {
-			System.out.println("해당 폴더가 존재합니다.");
+			System.out.println("파일이 이미 존재합니다.");
 		}
 		
+		Scanner sc = new Scanner(System.in);
 		System.out.print("파일명: ");
 		String fileName = sc.next();
 		sc.nextLine();
 		
-		FileOutputStream fos = null;
+		BufferedWriter bw = null;
+		BufferedReader br = null;
 		
 		try {
-			fos = new FileOutputStream("C:/mywork/file/20230908file/" + fileName + ".txt");
-			
+			bw = new BufferedWriter
+					(new FileWriter(file + "/" + fileName + ".txt"));
 			while(true) {
-				System.out.print("문장을 입력하세요: ");
+				System.out.print("내용을 입력해 주세요: ");
 				String str = sc.nextLine();
-				
-				byte[] arr = str.getBytes();
-				fos.write(arr);
-				System.out.println("파일이 정상적으로 저장되었습니다.");
 				if(str.equals("그만")) break;
+				bw.write(str+"\r\n");
 			}
-
-		} catch (Exception e) {
+			System.out.println("파일 작성완료!");
+		
+		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				fos.close();
-				sc.close();
+				bw.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			
 		}
-		
-		
-		
 		
 		
 
